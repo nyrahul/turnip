@@ -1,0 +1,25 @@
+{
+  "sources": [
+    {
+      "name": "feodo-ipblock",
+      "severity": "high",
+      "link": "https://feodotracker.abuse.ch/downloads/ipblocklist_recommended.txt",
+      "type": "list",
+      "enable": true
+    },
+    {
+      "name": "feodo-snort",
+      "severity": "high",
+      "link": "https://feodotracker.abuse.ch/downloads/feodotracker.rules",
+      "type": "snort",
+      "enable": false
+    },
+    {
+      "name": "feodo-snort-aggressive",
+      "severity": "low",
+      "link": "https://feodotracker.abuse.ch/downloads/feodotracker_aggressive.rules",
+      "type": "snort",
+      "enable": false
+    }
+  ]
+}
