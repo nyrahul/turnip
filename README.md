@@ -15,7 +15,7 @@ import turnip "github.com/nyrahul/turnip/api"
 		log.Fatal().Msg(err.Error())
 	}
 
-	src, reason := turnip.AddressIsBlocked("97.107.134.115")
+	src, reason := turnip.AddressIsBlocked("103.248.217.234")
 	log.Info().Msgf("ip=%v\nsrc=%v\nlink=%v\nseverity=%v\nreason=%v",
 		ip, src.Name, src.Link, src.Severity, reason)
 
