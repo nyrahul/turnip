@@ -18,12 +18,13 @@ import turnip "github.com/nyrahul/turnip/api"
 	src, reason := turnip.AddressIsBlocked("103.248.217.234")
 	log.Info().Msgf("ip=%v\nsrc=%v\nlink=%v\nseverity=%v\nreason=%v",
 		ip, src.Name, src.Link, src.Severity, reason)
+```
 
-	/* Sample Output
-	9:53PM INF ip=103.248.217.234
-	src=feodo-snort
-	link=https://feodotracker.abuse.ch/downloads/feodotracker.rules
-	severity=high
-	reason=Feodo Tracker: potential TrickBot CnC Traffic detected
-	*/
+Output:
+```
+9:53PM INF ip=103.248.217.234
+src=feodo-snort
+link=https://feodotracker.abuse.ch/downloads/feodotracker.rules
+severity=high
+reason=Feodo Tracker: potential TrickBot CnC Traffic detected
 ```
