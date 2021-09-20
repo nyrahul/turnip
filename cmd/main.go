@@ -21,6 +21,12 @@ func printBuildDetails() {
 	log.Info().Msgf("commit:%v, branch:%v, date:%v", GitCommit, GitBranch, BuildDate)
 }
 
+func tryAddress(ip string) {
+	src, reason := turnip.AddressIsBlocked(ip)
+	log.Info().Msgf("ip=%v\nsrc=%v\nlink=%v\nseverity=%v\nreason=%v",
+		ip, src.Name, src.Link, src.Severity, reason)
+}
+
 func main() {
 	source := flag.String("source", "data-sources.json", "Data source to use")
 	flag.Parse()
@@ -30,9 +36,6 @@ func main() {
 		log.Fatal().Msg(err.Error())
 	}
 
-	isBlocked, reason, src := turnip.AddressIsBlocked("97.107.134.115")
-	log.Info().Msgf("IsBlocked:%v, reason:%v, src=%v", isBlocked, reason, src)
-
-	isBlocked, reason, src = turnip.AddressIsBlocked("103.248.217.234")
-	log.Info().Msgf("IsBlocked:%v, reason:%v, src=%v", isBlocked, reason, src)
+	tryAddress("97.107.134.115")
+	tryAddress("103.248.217.234")
 }

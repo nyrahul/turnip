@@ -145,12 +145,12 @@ func Setup(dataSrc string) error {
 	return nil
 }
 
-func AddressIsBlocked(addr string) (bool, string, string) {
+func AddressIsBlocked(addr string) (*DataSource, string) {
 	for _, bm := range badMaps {
 		ad, ok := bm.Map[addr] // ad = address data
 		if ok {
-			return true, ad.Reason, bm.Ds.Name
+			return &bm.Ds, ad.Reason
 		}
 	}
-	return false, "", ""
+	return nil, ""
 }
