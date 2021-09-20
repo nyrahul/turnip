@@ -1,8 +1,10 @@
 github.com/coreos/go-systemd/v22 v22.3.2/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
 github.com/godbus/dbus/v5 v5.0.4/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=
+github.com/google/gonids v0.0.0-20210820225427-41c7dcccf2ee h1:RVoBLpKRD1IycKCvmrlWP8iFCfH1JaBFF7aQhxRCHDc=
+github.com/google/gonids v0.0.0-20210820225427-41c7dcccf2ee/go.mod h1:ruI8835YUpA2cnRgGk0GGkhwmWa12bQL/py/znxIlaM=
+github.com/kylelemons/godebug v1.1.0 h1:RPNrshWIDI6G2gRW9EHilWtl7Z6Sb1BR0xunSBf0SNc=
+github.com/kylelemons/godebug v1.1.0/go.mod h1:9/0rRGxNHcop5bhtWyNeEfOS8JIWk580+fNqagV/RAw=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
-github.com/recursionpharma/go-csv-map v0.0.0-20160524001940-792523c65ae9 h1:cvht1GrOF8MbAgDvN6flt1sj9Aixv/SokD/XqH6MXIQ=
-github.com/recursionpharma/go-csv-map v0.0.0-20160524001940-792523c65ae9/go.mod h1:Voxo2KUk+o0x2taVupAT82GWwNK6Nv7LFwZHyJduxnY=
 github.com/rs/xid v1.3.0/go.mod h1:trrq9SKmegXys3aeAKXMUTdJsYXVwGY3RLcfgqegfbg=
 github.com/rs/zerolog v1.25.0 h1:Rj7XygbUHKUlDPcVdoLyR91fJBsduXj5fRxyqIQj/II=
 github.com/rs/zerolog v1.25.0/go.mod h1:7KHcEGe0QZPOm2IE4Kpb5rTh6n1h2hIgS5OOnu1rUaI=

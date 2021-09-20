@@ -12,7 +12,7 @@
       "severity": "high",
       "link": "https://feodotracker.abuse.ch/downloads/feodotracker.rules",
       "type": "snort",
-      "enable": false
+      "enable": true
     },
     {
       "name": "feodo-snort-aggressive",

@@ -30,6 +30,9 @@ func main() {
 		log.Fatal().Msg(err.Error())
 	}
 
-	isBlocked, reason := turnip.AddressIsBlocked("97.107.134.115")
-	log.Info().Msgf("AddressIsBlocked:%v, reason:%v", isBlocked, reason)
+	isBlocked, reason, src := turnip.AddressIsBlocked("97.107.134.115")
+	log.Info().Msgf("IsBlocked:%v, reason:%v, src=%v", isBlocked, reason, src)
+
+	isBlocked, reason, src = turnip.AddressIsBlocked("103.248.217.234")
+	log.Info().Msgf("IsBlocked:%v, reason:%v, src=%v", isBlocked, reason, src)
 }
