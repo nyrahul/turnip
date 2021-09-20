@@ -7,6 +7,7 @@ GIT_INFO := $(shell govvv -flags)
 GO_BUILD = $(GO) build -ldflags "$(GIT_INFO)"
 
 build:
+	@go mod tidy
 	$(GO_BUILD) -o bin/turnip cmd/main.go
 
 clean:

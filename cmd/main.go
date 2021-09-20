@@ -23,8 +23,12 @@ func printBuildDetails() {
 
 func tryAddress(ip string) {
 	src, reason := turnip.AddressIsBlocked(ip)
-	log.Info().Msgf("ip=%v\nsrc=%v\nlink=%v\nseverity=%v\nreason=%v",
-		ip, src.Name, src.Link, src.Severity, reason)
+	if src != nil {
+		log.Info().Msgf("ip=%v\nsrc=%v\nlink=%v\nseverity=%v\nreason=%v",
+			ip, src.Name, src.Link, src.Severity, reason)
+	} else {
+		log.Info().Msgf("Not in any blocked list")
+	}
 }
 
 func main() {
@@ -38,4 +42,5 @@ func main() {
 
 	tryAddress("97.107.134.115")
 	tryAddress("103.248.217.234")
+	tryAddress("192.168.10.10")
 }
