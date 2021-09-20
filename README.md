@@ -10,7 +10,7 @@ This project provides a golang API to verify if the given address is in any of t
 ```go
 import turnip "github.com/nyrahul/turnip/api"
 :::
-	err := turnip.Setup("data-sources.json")	// sample data-sources.json provided
+	err := turnip.Setup(turnip.TurnipDefSrc)
 	if err != nil {
 		log.Fatal().Msg(err.Error())
 	}

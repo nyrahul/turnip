@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"os"
 
 	turnip "github.com/nyrahul/turnip/api"
@@ -32,10 +31,8 @@ func tryAddress(ip string) {
 }
 
 func main() {
-	source := flag.String("source", "data-sources.json", "Data source to use")
-	flag.Parse()
 	printBuildDetails()
-	err := turnip.Setup(*source)
+	err := turnip.Setup(turnip.TurnipDefSrc)
 	if err != nil {
 		log.Fatal().Msg(err.Error())
 	}

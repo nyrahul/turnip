@@ -13,6 +13,8 @@ import (
 	"github.com/rs/zerolog/log"
 )
 
+const TurnipDefSrc = "https://raw.githubusercontent.com/nyrahul/turnip/main/data-sources.json"
+
 type DataSources struct {
 	DataSources []DataSource `json:"sources"`
 }
@@ -120,13 +122,11 @@ func handleSource(src DataSource) (BadMap, error) {
 }
 
 func Setup(dataSrc string) error {
-	jsonFile, err := os.Open(dataSrc)
+	jsonData, err := readFileLink(dataSrc)
 	if err != nil {
 		log.Error().Msgf("failed opening json file=%v err=%v", dataSrc, err.Error())
 		return err
 	}
-	defer jsonFile.Close()
-	jsonData, _ := io.ReadAll(jsonFile)
 
 	json.Unmarshal([]byte(jsonData), &srcData)
 
